@@ -15,7 +15,7 @@ export function CTAFooter() {
             </p>
           </div>
           <a
-            href="mailto:contact@lumexalabs.com"
+            href="mailto:dohntahng@gmail.com"
             className="inline-flex shrink-0 items-center justify-center rounded-lg bg-electric-500 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-electric-500/25 transition hover:bg-electric-400"
           >
             Contact Lumexa Labs
