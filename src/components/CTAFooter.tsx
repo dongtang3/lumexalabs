@@ -1,6 +1,6 @@
 import { Globe, Mail, Phone, Video } from 'lucide-react'
 
-const businessEmail = 'dohntang@gmail.com'
+const businessEmail = 'dohntahng@gmail.com'
 const phoneNumber = '7745259015'
 const displayPhoneNumber = '(774) 525-9015'
 const websiteUrl = 'https://lumexalabs.me'
