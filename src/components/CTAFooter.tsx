@@ -1,6 +1,31 @@
-import { Mail, Video } from 'lucide-react'
+import { Globe, Mail, Phone, Video } from 'lucide-react'
 
+const businessEmail = 'dohntang@gmail.com'
+const phoneNumber = '7745259015'
+const displayPhoneNumber = '(774) 525-9015'
+const websiteUrl = 'https://lumexalabs.me'
 const zoomLink = 'https://us05web.zoom.us/j/3859499381?pwd=ORUrEScO7Ganzg4ErxwYMmtqlQk8Xc.1'
+
+const contactMethods = [
+  {
+    icon: Mail,
+    label: 'Business Email',
+    value: businessEmail,
+    href: `mailto:${businessEmail}`,
+  },
+  {
+    icon: Phone,
+    label: 'Phone Number',
+    value: displayPhoneNumber,
+    href: `tel:${phoneNumber}`,
+  },
+  {
+    icon: Globe,
+    label: 'Website',
+    value: 'lumexalabs.me',
+    href: websiteUrl,
+  },
+] as const
 
 export function CTAFooter() {
   return (
@@ -20,7 +45,7 @@ export function CTAFooter() {
           </div>
           <div className="flex w-full flex-col gap-3 sm:w-auto sm:flex-row">
             <a
-              href="mailto:dohntahng@gmail.com"
+              href={`mailto:${businessEmail}`}
               className="inline-flex shrink-0 items-center justify-center gap-2 rounded-lg bg-electric-500 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-electric-500/25 transition hover:bg-electric-400"
             >
               <Mail className="size-4" strokeWidth={1.9} />
@@ -36,6 +61,27 @@ export function CTAFooter() {
               Schedule a Zoom Call
             </a>
           </div>
+        </div>
+        <div className="mx-auto mt-10 grid max-w-6xl gap-3 px-4 sm:grid-cols-3 sm:px-6 lg:px-8">
+          {contactMethods.map(({ icon: Icon, label, value, href }) => (
+            <a
+              key={label}
+              href={href}
+              className="flex items-center gap-3 rounded-lg border border-white/10 bg-white/5 px-4 py-3 text-left transition hover:border-white/20 hover:bg-white/10"
+            >
+              <span className="flex size-10 shrink-0 items-center justify-center rounded-lg bg-electric-500/15 text-sky-200">
+                <Icon className="size-4" strokeWidth={1.9} />
+              </span>
+              <span className="min-w-0">
+                <span className="block text-xs font-semibold uppercase tracking-wide text-white/50">
+                  {label}
+                </span>
+                <span className="mt-0.5 block truncate text-sm font-semibold text-white">
+                  {value}
+                </span>
+              </span>
+            </a>
+          ))}
         </div>
       </div>
 
