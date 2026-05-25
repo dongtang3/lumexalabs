@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="128" viewBox="0 0 520 128" role="img" aria-labelledby="title desc">
+  <title id="title">Lumexa Labs LLC logo</title>
+  <desc id="desc">Lumexa Labs LLC logo with a luminous L monogram and modern wordmark.</desc>
+  <defs>
+    <linearGradient id="bg" x1="20" x2="108" y1="14" y2="114" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0f1f35"/>
+      <stop offset="1" stop-color="#07111f"/>
+    </linearGradient>
+    <linearGradient id="beam" x1="38" x2="92" y1="30" y2="92" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#67e8f9"/>
+      <stop offset=".52" stop-color="#3b82f6"/>
+      <stop offset="1" stop-color="#2563eb"/>
+    </linearGradient>
+    <filter id="glow" width="160%" height="160%" x="-30%" y="-30%" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="3.5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="96" height="96" x="16" y="16" fill="url(#bg)" rx="22"/>
+  <path fill="#152a45" d="M32 42c0-5.5 4.5-10 10-10h44c5.5 0 10 4.5 10 10v44c0 5.5-4.5 10-10 10H42c-5.5 0-10-4.5-10-10V42z" opacity=".58"/>
+  <path fill="none" stroke="#67e8f9" stroke-linecap="round" stroke-width="3" d="M48 43h10c4.4 0 8 3.6 8 8v8c0 4.4 3.6 8 8 8h10" opacity=".45"/>
+  <path fill="none" stroke="url(#beam)" stroke-linecap="round" stroke-linejoin="round" stroke-width="10" d="M50 43v42h31"/>
+  <path fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M50 43v42h31" opacity=".58"/>
+  <g filter="url(#glow)">
+    <circle cx="50" cy="43" r="5" fill="#67e8f9"/>
+    <circle cx="81" cy="85" r="5" fill="#3b82f6"/>
+    <circle cx="84" cy="67" r="4" fill="#67e8f9"/>
+  </g>
+  <path fill="#67e8f9" d="m86.5 40 1.7 4.3 4.3 1.7-4.3 1.7-1.7 4.3-1.7-4.3-4.3-1.7 4.3-1.7 1.7-4.3z"/>
+  <text x="136" y="61" fill="#0a1628" font-family="DM Sans, Inter, Arial, sans-serif" font-size="34" font-weight="800" letter-spacing="0">Lumexa Labs</text>
+  <text x="138" y="89" fill="#475569" font-family="DM Sans, Inter, Arial, sans-serif" font-size="16" font-weight="700" letter-spacing="2.2">LLC</text>
+  <path fill="#2563eb" d="M140 100h162v4H140z" opacity=".9"/>
+</svg>

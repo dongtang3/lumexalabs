@@ -1,3 +1,7 @@
+import { Mail, Video } from 'lucide-react'
+
+const zoomLink = 'https://us05web.zoom.us/j/3859499381?pwd=ORUrEScO7Ganzg4ErxwYMmtqlQk8Xc.1'
+
 export function CTAFooter() {
   return (
     <footer className="bg-navy-950 text-white">
@@ -14,12 +18,24 @@ export function CTAFooter() {
               Let&apos;s build software that fits how your business actually works.
             </p>
           </div>
-          <a
-            href="mailto:dohntahng@gmail.com"
-            className="inline-flex shrink-0 items-center justify-center rounded-lg bg-electric-500 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-electric-500/25 transition hover:bg-electric-400"
-          >
-            Contact Lumexa Labs
-          </a>
+          <div className="flex w-full flex-col gap-3 sm:w-auto sm:flex-row">
+            <a
+              href="mailto:dohntahng@gmail.com"
+              className="inline-flex shrink-0 items-center justify-center gap-2 rounded-lg bg-electric-500 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-electric-500/25 transition hover:bg-electric-400"
+            >
+              <Mail className="size-4" strokeWidth={1.9} />
+              Contact Lumexa Labs
+            </a>
+            <a
+              href={zoomLink}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex shrink-0 items-center justify-center gap-2 rounded-lg border border-white/20 bg-white/10 px-6 py-3 text-sm font-semibold text-white transition hover:border-white/35 hover:bg-white/15"
+            >
+              <Video className="size-4" strokeWidth={1.9} />
+              Schedule a Zoom Call
+            </a>
+          </div>
         </div>
       </div>
 

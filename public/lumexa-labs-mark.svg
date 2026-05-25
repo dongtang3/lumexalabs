@@ -1,4 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="96" height="96" viewBox="0 0 96 96">
+<svg xmlns="http://www.w3.org/2000/svg" width="96" height="96" viewBox="0 0 96 96" role="img" aria-labelledby="title desc">
+  <title id="title">Lumexa Labs mark</title>
+  <desc id="desc">A luminous geometric L monogram with connected software nodes.</desc>
   <defs>
     <linearGradient id="bg" x1="14" x2="82" y1="10" y2="88" gradientUnits="userSpaceOnUse">
       <stop stop-color="#0f1f35"/>
@@ -9,14 +11,23 @@
       <stop offset=".52" stop-color="#3b82f6"/>
       <stop offset="1" stop-color="#2563eb"/>
     </linearGradient>
+    <filter id="glow" width="160%" height="160%" x="-30%" y="-30%" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="3.5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
   </defs>
   <rect width="96" height="96" fill="url(#bg)" rx="22"/>
   <path fill="#152a45" d="M16 26c0-5.5 4.5-10 10-10h44c5.5 0 10 4.5 10 10v44c0 5.5-4.5 10-10 10H26c-5.5 0-10-4.5-10-10V26z" opacity=".58"/>
   <path fill="none" stroke="#67e8f9" stroke-linecap="round" stroke-width="3" d="M32 27h10c4.4 0 8 3.6 8 8v8c0 4.4 3.6 8 8 8h10" opacity=".45"/>
   <path fill="none" stroke="url(#beam)" stroke-linecap="round" stroke-linejoin="round" stroke-width="10" d="M34 27v42h31"/>
   <path fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M34 27v42h31" opacity=".58"/>
-  <circle cx="34" cy="27" r="5" fill="#67e8f9"/>
-  <circle cx="65" cy="69" r="5" fill="#3b82f6"/>
-  <circle cx="68" cy="51" r="4" fill="#67e8f9"/>
+  <g filter="url(#glow)">
+    <circle cx="34" cy="27" r="5" fill="#67e8f9"/>
+    <circle cx="65" cy="69" r="5" fill="#3b82f6"/>
+    <circle cx="68" cy="51" r="4" fill="#67e8f9"/>
+  </g>
   <path fill="#67e8f9" d="m70.5 24 1.7 4.3 4.3 1.7-4.3 1.7-1.7 4.3-1.7-4.3-4.3-1.7 4.3-1.7 1.7-4.3z"/>
 </svg>

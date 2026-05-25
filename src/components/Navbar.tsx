@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Menu, X } from 'lucide-react'
+import { publicAsset } from '../lib/publicAsset'
 
 const links = [
   { href: '#services', label: 'Services' },
@@ -8,6 +9,8 @@ const links = [
   { href: '#about', label: 'About' },
   { href: '#contact', label: 'Contact' },
 ] as const
+
+const zoomLink = 'https://us05web.zoom.us/j/3859499381?pwd=ORUrEScO7Ganzg4ErxwYMmtqlQk8Xc.1'
 
 export function Navbar() {
   const [open, setOpen] = useState(false)
@@ -20,9 +23,16 @@ export function Navbar() {
       >
         <a
           href="#top"
-          className="shrink-0 text-base font-bold tracking-tight text-white sm:text-lg"
+          className="flex shrink-0 items-center gap-2.5 text-base font-bold tracking-tight text-white sm:text-lg"
         >
-          Lumexa Labs LLC
+          <img
+            src={publicAsset('lumexa-labs-mark.svg')}
+            alt=""
+            className="size-9 rounded-lg"
+            width={36}
+            height={36}
+          />
+          <span>Lumexa Labs LLC</span>
         </a>
 
         <ul className="hidden items-center gap-8 md:flex">
@@ -40,7 +50,9 @@ export function Navbar() {
 
         <div className="flex items-center gap-2">
           <a
-            href="#contact"
+            href={zoomLink}
+            target="_blank"
+            rel="noreferrer"
             className="hidden rounded-lg bg-electric-500 px-4 py-2 text-sm font-semibold text-white shadow-md shadow-electric-500/25 transition hover:bg-electric-400 md:inline-flex"
           >
             Schedule a Call
@@ -76,7 +88,9 @@ export function Navbar() {
           ))}
           <li className="pt-2">
             <a
-              href="#contact"
+              href={zoomLink}
+              target="_blank"
+              rel="noreferrer"
               className="block rounded-lg bg-electric-500 px-3 py-2.5 text-center text-sm font-semibold text-white hover:bg-electric-400"
               onClick={() => setOpen(false)}
             >
